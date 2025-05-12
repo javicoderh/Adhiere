@@ -1,0 +1,113 @@
+.sidenav-toggle {
+  position: fixed;
+  top: 17.5%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: #F58FC6;
+  border: solid 4px #a56185;
+  border-right: none;
+  padding: 0.5em 1em;
+  border-radius: 5px 0 0 5px;
+  cursor: pointer;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 11; /* Mayor que el sidenav */
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease-in-out;
+}
+
+.arrow-icon.open {
+  transform: rotate(180deg);
+}
+
+.sidenav-container {
+  position: fixed;
+  top: 13.5%;
+  right: -160px; /* Oculto fuera de la pantalla inicialmente */
+  width: 150px;
+  height: 100vh;
+  border-radius: 2%;
+  background-color: #F58FC6;
+  padding-top: 2em;
+  display: flex;
+  border-left: solid 5px #a56185;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 1em;
+  box-shadow: -2px 0 5px #f5b6d8;
+  z-index: 10;
+  transition: right 0.3s ease-in-out; /* Transición para el deslizamiento */
+}
+
+.sidenav-container.open {
+  right: 0; /* Se muestra al deslizarse hacia la izquierda */
+}
+
+.sidenav-button {
+  display: block;
+  padding: 0.8em 1.5em;
+  text-decoration: none;
+  color: #333;
+  margin-bottom: 0.5em;
+  border: none;
+  background-color: transparent;
+  text-align: right;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sidenav-button:hover {
+  background-color: #eee;
+}
+
+.sidenav-button.active {
+  font-weight: bold;
+  color: #007bff;
+}
+
+ul {
+    text-align: start;
+}
+
+li {
+    list-style: none;
+    text-align: start;
+    color: white;
+}
+
+@media (max-width: 768px) {
+
+.sidenav-toggle {
+    top: 13.5%;
+    transform: scale(0.8);
+    right: -14px;
+}   
+
+.sidenav-container {
+  position: fixed;
+  top: 13.5%;
+  right: -160px; /* Oculto fuera de la pantalla inicialmente */
+  width: 80px;
+  height: 100vh;
+  border-radius: 2%;
+  padding-left: 30px;
+  background-color: #F58FC6;
+  padding-top: 2em;
+  display: flex;
+  border-left: solid 5px #a56185;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 1em;
+  box-shadow: -2px 0 5px #f5b6d8;
+  z-index: 10;
+  transition: right 0.3s ease-in-out; /* Transición para el deslizamiento */
+}
+
+ul {
+    padding-left: 20px;
+}
+}

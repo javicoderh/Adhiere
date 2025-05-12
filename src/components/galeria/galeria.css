@@ -1,0 +1,18 @@
+.galeria-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center; /* Centra el contenido horizontalmente */
+}
+
+.gridContainer img {
+  border-radius: 8px;
+  width: 100% /* Bordes redondeados opcional */
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 80%;
+}
