@@ -27,6 +27,7 @@
     font-size: 1.8rem;
     color: rgb(255, 255, 255);
     font-family: 'Poppins', sans-serif;
+    transform: translateX(-25%);
 }
 
 .logo {
